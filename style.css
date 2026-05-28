@@ -4,18 +4,20 @@
     --surface: #161616;
     --surface-hover: #1A1A1A;
     --border: #2A2A2A;
-    --text: #E8E4DF;
-    --muted: #7A756E;
+    --text: #ebeae8;
+    --muted: #b3aea7;
     --accent: #E85D50;
     --accent-dim: rgba(232, 93, 80, 0.15);
-    
+
     --font-display: 'Instrument Serif', serif;
     --font-sans: 'Google Sans Flex', sans-serif;
-    
+
     --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -39,7 +41,10 @@ body {
 /* ─── TEXTURE / GRAIN ─── */
 .noise {
     position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
     z-index: 9999;
     opacity: 0.04;
@@ -47,7 +52,12 @@ body {
 }
 
 /* ─── TYPOGRAPHY ─── */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-display);
     font-weight: 400;
     line-height: 1.1;
@@ -70,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     font-size: 1.125rem;
-    color: var(--muted);
+    color: var(--text);
     max-width: 60ch;
 }
 
@@ -90,8 +100,13 @@ a:hover {
     color: var(--accent);
 }
 
-.text-accent { color: var(--accent); }
-.text-italic { font-style: italic; }
+.text-accent {
+    color: var(--accent);
+}
+
+.text-italic {
+    font-style: italic;
+}
 
 .text-gradient {
     background: linear-gradient(135deg, var(--accent) 0%, #FFB085 100%);
@@ -127,7 +142,9 @@ section {
 /* ─── NAVIGATION ─── */
 nav {
     position: fixed;
-    top: 0; left: 0; width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 2rem 5vw;
     display: flex;
     justify-content: space-between;
@@ -238,6 +255,7 @@ nav {
 }
 
 .content-block .col-right {
+    color: var(--text);
     grid-column: 6 / -1;
 }
 
@@ -277,7 +295,8 @@ nav {
     font-weight: 400;
     color: var(--text);
     margin: 1rem 0;
-    overflow: hidden; /* For smooth entrance */
+    overflow: hidden;
+    /* For smooth entrance */
     background: var(--surface);
     padding: 1.5rem 2rem;
     border-radius: 4rem;
@@ -296,7 +315,8 @@ nav {
 .process-arrow {
     display: inline-block;
     color: var(--accent);
-    opacity: 0; /* Hidden initially for animation */
+    opacity: 0;
+    /* Hidden initially for animation */
 }
 
 /* ─── ABOUT / CV ─── */
@@ -309,7 +329,7 @@ nav {
     margin-bottom: 4rem;
 }
 
-.cv-grid > h3 {
+.cv-grid>h3 {
     grid-column: 1 / 4;
     font-size: 2rem;
     color: var(--muted);
@@ -372,9 +392,13 @@ nav {
 
 /* ─── FOOTER ─── */
 footer {
-    padding: 5rem 0;
+    padding: 10rem 0;
     border-top: 1px solid var(--border);
     text-align: center;
+}
+
+footer p {
+    margin: 0 auto;
 }
 
 .footer-cta {
@@ -423,24 +447,29 @@ footer {
         display: flex;
         flex-direction: column;
     }
+
     .hero-desc {
         margin-top: 2rem;
     }
+
     .case-meta {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 2rem;
         margin-bottom: 2rem;
     }
+
     .content-block .col-left h3 {
         position: relative;
         top: 0;
         margin-bottom: 1.5rem;
     }
+
     .editorial-list li {
         grid-template-columns: 1fr;
         gap: 0.5rem;
     }
+
     .cv-item-header {
         flex-direction: column;
         gap: 0.5rem;
