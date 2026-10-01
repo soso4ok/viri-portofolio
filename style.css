@@ -176,19 +176,9 @@ nav {
     padding-top: 5rem;
 }
 
-.hero-role {
-    font-family: var(--font-sans);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.875rem;
-    color: var(--accent);
-    margin-bottom: 2rem;
-    display: block;
-}
-
 .hero-desc {
     grid-column: 7 / -1;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 /* ─── CASE STUDY (TRUTH TAILS) ─── */
@@ -449,7 +439,7 @@ footer p {
     }
 
     .hero-desc {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .case-meta {
